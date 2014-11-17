@@ -1,0 +1,23 @@
+package core3d.utility;
+
+import core3d.Entity;
+
+public class Light extends Entity {
+
+	public Light() {
+		// TODO Auto-generated constructor stub
+	}
+
+	@Override
+	public void init() {
+		renderObject = new LightRender(this);
+	}
+
+	@Override
+	public void update() {
+		super.update();
+		// TODO Auto-generated method stub
+
+	}
+
+}

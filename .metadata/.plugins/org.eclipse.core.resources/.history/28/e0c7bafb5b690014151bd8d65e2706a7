@@ -1,0 +1,33 @@
+package core3d.entities;
+
+import org.lwjgl.opengl.GL11;
+
+import core3d.Entity;
+import core3d.Node;
+import core3d.RenderObject;
+
+public class CameraRenderObject extends RenderObject {
+
+	public CameraRenderObject(Node entity) {
+		super(entity);
+		// TODO Auto-generated constructor stub
+	}
+	
+	// set to override default list adding
+	public void init() {
+		
+	}
+
+	@Override
+	public void render() {
+		setCamera();
+	}
+
+	public void setCamera()
+	{
+		GL11.glRotatef(entity.rotzg,1.0f,0,0);
+        GL11.glRotatef(entity.rotyg,0,1.0f,0);
+
+        GL11.glTranslatef(-entity.xg, -entity.yg, -entity.zg);
+	}
+}

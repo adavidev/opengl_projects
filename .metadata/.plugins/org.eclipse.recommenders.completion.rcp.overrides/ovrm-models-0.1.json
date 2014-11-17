@@ -1,0 +1,12 @@
+{
+  "C:\\Users\\Alan\\Desktop\\aljasopengltest\\Core3D\\src": {
+    "location": "C:\\Users\\Alan\\Desktop\\aljasopengltest\\Core3D\\src",
+    "status": "UNRESOLVED",
+    "error": "No class path info available for \u0027C:\\Users\\Alan\\Desktop\\aljasopengltest\\Core3D\\src\u0027. Skipped."
+  },
+  "C:\\Windows\\jre\\lib\\rt.jar": {
+    "coordinate": "jre:jre:zip:ovrm:1.0.0",
+    "location": "C:\\Windows\\jre\\lib\\rt.jar",
+    "status": "RESOLVED"
+  }
+}

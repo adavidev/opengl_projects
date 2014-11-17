@@ -1,0 +1,10 @@
+uniform sampler2D tex;
+uniform float sa; //sine of the current phase- just a test variable to make sure the two components can communicate
+ 
+void main(void)
+{
+     vec4 color = texture2D(tex,gl_TexCoord[0].st);
+     color.x *= sa; //multiply the red component by the animation variable
+     color.w = 1; //make sure the alpha is 100%
+     gl_FragColor = color;
+}

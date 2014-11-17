@@ -1,0 +1,42 @@
+package core3d.utility;
+
+import java.nio.ByteBuffer;
+import java.nio.ByteOrder;
+import java.nio.FloatBuffer;
+
+import org.lwjgl.opengl.GL11;
+
+import core3d.Entity;
+import core3d.RenderObject;
+
+public class LightRender extends RenderObject {
+
+	private float lightAmbient[] = { 0.5f, 0.5f, 0.5f, 1.0f };  // Ambient Light Values ( NEW )
+    private float lightDiffuse[] = { 1.0f, 1.0f, 1.0f, 1.0f };      // Diffuse Light Values ( NEW )
+    private float lightPosition[] = { 0.0f, 0.0f, 2.0f, 1.0f }; // Light Position ( NEW )
+	
+	public LightRender(Entity entity) {
+		super(entity);
+		// TODO Auto-generated constructor stub
+	}
+
+	@Override
+	public void render() {
+//		ByteBuffer temp = ByteBuffer.allocateDirect(16);
+//        temp.order(ByteOrder.nativeOrder());
+//		GL11.glLight(GL11.GL_LIGHT1, GL11.GL_AMBIENT, (FloatBuffer)temp.asFloatBuffer().put(lightAmbient).flip());              // Setup The Ambient Light
+//        GL11.glLight(GL11.GL_LIGHT1, GL11.GL_DIFFUSE, (FloatBuffer)temp.asFloatBuffer().put(lightDiffuse).flip());              // Setup The Diffuse Light
+//        GL11.glLight(GL11.GL_LIGHT1, GL11.GL_POSITION,(FloatBuffer)temp.asFloatBuffer().put(lightPosition).flip());         // Position The Light
+//        GL11.glEnable(GL11.GL_LIGHT1);                          // Enable Light One
+		GL11.glEnable(GL11.GL_TEXTURE_2D); // Enable Texture Mapping
+        GL11.glShadeModel(GL11.GL_SMOOTH); // Enable Smooth Shading
+        GL11.glClearColor(0.0f, 0.0f, 0.0f, 0.0f); // Black Background
+        GL11.glClearDepth(1.0f); // Depth Buffer Setup
+        // Really Nice Perspective Calculations
+        GL11.glHint(GL11.GL_PERSPECTIVE_CORRECTION_HINT, GL11.GL_NICEST);
+
+        GL11.glMatrixMode(GL11.GL_PROJECTION); // Select The Projection Matrix
+        GL11.glLoadIdentity(); // Reset The Projection Matrix
+	}
+
+}

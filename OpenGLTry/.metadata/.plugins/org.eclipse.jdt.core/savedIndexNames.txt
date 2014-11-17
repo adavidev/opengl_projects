@@ -1,0 +1,1 @@
+INDEX VERSION 1.126+G:\Users\Alan\Desktop\aljasopengltest\OpenGLTry\.metadata\.plugins\org.eclipse.jdt.core

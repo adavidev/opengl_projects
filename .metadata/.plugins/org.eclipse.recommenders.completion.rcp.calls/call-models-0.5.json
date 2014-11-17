@@ -1,0 +1,17 @@
+{
+  "C:\\Users\\Alan\\Desktop\\aljasopengltest\\Core3D\\src": {
+    "location": "C:\\Users\\Alan\\Desktop\\aljasopengltest\\Core3D\\src",
+    "status": "UNRESOLVED",
+    "error": "No class path info available for \u0027C:\\Users\\Alan\\Desktop\\aljasopengltest\\Core3D\\src\u0027. Skipped."
+  },
+  "C:\\Users\\Alan\\Desktop\\lwjgl-2.9.1\\jar\\lwjgl.jar": {
+    "location": "C:\\Users\\Alan\\Desktop\\lwjgl-2.9.1\\jar\\lwjgl.jar",
+    "status": "UNRESOLVED",
+    "error": "No call model found for \u0027C:\\Users\\Alan\\Desktop\\lwjgl-2.9.1\\jar\\lwjgl.jar\u0027. Neither fingerprint \u0027f58c5aabcef0e41718a564be9f8e412fff8db847\u0027 nor symbolic name \u0027lwjgl\u0027 are known."
+  },
+  "C:\\Windows\\jre\\lib\\rt.jar": {
+    "coordinate": "jre:jre:zip:call:1.0.0",
+    "location": "C:\\Windows\\jre\\lib\\rt.jar",
+    "status": "RESOLVED"
+  }
+}

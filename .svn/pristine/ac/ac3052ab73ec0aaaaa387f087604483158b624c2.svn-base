@@ -1,0 +1,12 @@
+package HeightMap;
+
+public class MathHelper
+{
+
+	public static float Lerp(float f, float g, float xNormalized)
+	{
+		// TODO Auto-generated method stub
+		return 0;
+	}
+
+}

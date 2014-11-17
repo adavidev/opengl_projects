@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Copy 2 elements to &apos;OpenGLTry&apos;&#x0D;&#x0A;- Original project: &apos;OpenGLTry&apos;&#x0D;&#x0A;- Destination element: &apos;OpenGLTry&apos;&#x0D;&#x0A;- Original elements:&#x0D;&#x0A;     shader.vs&#x0D;&#x0A;     shader.fs" description="Copy files" destination="=OpenGLTry" element1="src/shaders/shader.vs" element2="src/shaders/shader.fs" files="2" flags="589830" folders="0" id="org.eclipse.jdt.ui.copy" policy="org.eclipse.jdt.ui.copyResources" stamp="1415857457037" units="0" version="1.0"/>
+</session>

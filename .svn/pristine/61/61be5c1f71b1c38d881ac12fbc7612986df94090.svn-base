@@ -1,0 +1,116 @@
+package BlockGame;
+
+import static org.lwjgl.opengl.GL11.GL_LINEAR;
+import static org.lwjgl.opengl.GL11.GL_TEXTURE_2D;
+import static org.lwjgl.opengl.GL11.glNormal3f;
+
+import java.io.IOException;
+
+import org.lwjgl.opengl.GL11;
+import org.newdawn.slick.Color;
+import org.newdawn.slick.opengl.Texture;
+import org.newdawn.slick.opengl.TextureLoader;
+import org.newdawn.slick.util.ResourceLoader;
+
+import Basic3D.Triangle;
+import Basic3D.Vector3f;
+import Basic3D.Quad;
+import Basic3D.Vertex;
+import GameCore.GameTime;
+import ModelImport.ObjImport;
+
+public class CompoundCube extends GameObject
+{
+	private static CompoundCube instance = null;
+
+	private Texture texture; // Storage For One Texture ( NEW )
+
+	// Quad[] quads;
+	TriDrawPair[] tris;
+
+	// Singleton
+	public static CompoundCube Instance()
+	{
+		if (instance == null)
+		{
+			instance = new CompoundCube();
+		}
+
+		return instance;
+	}
+
+	private CompoundCube()
+	{
+		Triangle[] tlist = ObjImport.modelImport3("tricube.obj");
+		tris = new TriDrawPair[tlist.length];
+		for (int i = 0; i < tlist.length; i++)
+		{
+			tris[i] = new TriDrawPair(tlist[i], true);
+		}
+	}
+
+	@Override
+	public void initialize()
+	{
+		loadTexture("");
+	}
+
+	@Override
+	public void draw()
+	{
+		Color.white.bind();
+		texture.bind(); // or GL11.glBind(texture.getTextureID());
+
+		for (TriDrawPair q : tris)
+		{
+			if (q.draw)
+			{
+				q.t.draw();
+			}
+		}
+	}
+
+	public void updateBounds(TestCompoundCubes tq)
+	{
+		// TODO Auto-generated method stub
+
+	}
+
+	@Override
+	public void update(GameTime gt)
+	{
+		// TODO Auto-generated method stub
+		
+	}
+	
+	/**
+	 * Texture loading using DevIL Example created by Mark Bernard
+	 */
+	private void loadTexture(String path)
+	{
+		try
+		{
+			texture = TextureLoader.getTexture("BMP",
+					ResourceLoader.getResourceAsStream("Crate.bmp"), true,
+					GL_LINEAR);
+			org.lwjgl.opengl.GL30.glGenerateMipmap(GL_TEXTURE_2D);
+		}
+		catch (IOException e)
+		{
+			e.printStackTrace();
+		}
+	}
+
+	private class TriDrawPair
+	{
+		public Triangle t;
+		public boolean draw;
+
+		public TriDrawPair(Triangle t, boolean draw)
+		{
+			this.t = t;
+			this.draw = draw;
+		}
+
+	}
+}
