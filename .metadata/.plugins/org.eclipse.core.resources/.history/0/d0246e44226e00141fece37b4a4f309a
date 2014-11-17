@@ -1,0 +1,21 @@
+package core3d.test;
+
+import org.lwjgl.opengl.DisplayMode;
+
+import core3d.rendering.IRenderer;
+
+public class TestRenderer implements IRenderer {
+
+	@Override
+	public void init(DisplayMode displayMode) {
+		// TODO Auto-generated method stub
+
+	}
+
+	@Override
+	public void render() {
+		// TODO Auto-generated method stub
+
+	}
+
+}

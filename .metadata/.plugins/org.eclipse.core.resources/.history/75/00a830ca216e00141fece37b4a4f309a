@@ -1,0 +1,19 @@
+package core3d.rendering;
+
+import org.lwjgl.opengl.DisplayMode;
+
+public class Zaxbys implements IRenderer {
+
+	@Override
+	public void init(DisplayMode displayMode) {
+		// TODO Auto-generated method stub
+
+	}
+
+	@Override
+	public void render() {
+		// TODO Auto-generated method stub
+
+	}
+
+}

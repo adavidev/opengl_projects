@@ -1,0 +1,5 @@
+package core3d.rendering;
+
+public class defaultRendering {
+
+}

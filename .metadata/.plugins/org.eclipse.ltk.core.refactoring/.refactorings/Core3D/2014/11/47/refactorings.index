@@ -1,2 +1,6 @@
 1416195417545	Copy compilation units
 1416195618120	Copy file
+1416204047463	Rename local variable 'instance'
+1416204222328	Rename type 'defaultRendering'
+1416204237980	Rename type 'defaultRenderer'
+1416205213321	Delete element
